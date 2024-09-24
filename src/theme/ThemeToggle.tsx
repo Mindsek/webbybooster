@@ -1,24 +1,26 @@
-'use client';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+"use client";
+// src/components/ThemeToggle.tsx
+import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-export const ModeToggle = ({ className }: { className?: string }) => {
-  const { setTheme, theme } = useTheme();
-
+export function ModeToggle() {
+  const { setTheme, theme } = useTheme()
   return (
     <Button
-      variant='ghost'
-      size='sm'
-      className={className}
+      variant="ghost"
+      size="sm"
       onClick={() => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
-      }}
-    >
-      <Sun className={cn("transition-all", theme === 'dark' ? 'rotate-90 scale-0' : 'rotate-0 scale-100')} />
-      <Moon className={cn("absolute transition-all", theme === 'dark' ? '-rotate-0 scale-100' : 'rotate-90 scale-0')} />
-      <span className='sr-only'>Toggle Theme</span>
+        setTheme(theme === "dark" ? "light" : "dark")
+      }}>
+      <Sun
+        size={20}
+        className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon
+        size={20}
+        className="absolute rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100" />
+      <span className="sr-only">Toggle Theme</span>
     </Button>
-  );
-};
+
+  )
+}

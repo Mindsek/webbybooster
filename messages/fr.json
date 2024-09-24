@@ -1,48 +1,62 @@
 {
-    "HomePage": {
-        "title": "Bonjour le monde!",
-        "about": "Allez à la page à propos"
-    },
     "metadata": {
-        "description": "Votre description ici"
+        "title": "Webbybooster",
+        "description": "Simplifie et optimise ton activité de formateur indépendant grâce à Webbybooster. Conçu spécialement pour les formateurs, cet outil tout-en-un t'aide à gérer tes tâches administratives, planifier tes cours, et organiser tes interventions efficacement. Parfait pour les novices comme pour les experts.",
+        "login": "Connexion",
+        "home": "Accueil",
+        "terms": "Termes",
+        "privacy": "Confidentialité",
+        "interventions": "Interventions",
+        "bpf": "BPF",
+        "missions_contracts": "Missions & Contrats",
+        "revenue_tracking": "Suivi CA",
+        "invoicing": "Facturation"
+    },
+    "header": {
+        "command": {
+            "title": "Rechercher des commandes",
+            "description": "Rechercher des commandes",
+            "command_input_placeholder": "Tapez pour rechercher...",
+            "command_input_placeholder_focus": "Tapez une commande ou recherchez..."
+        }
     },
     "navigation_command": {
         "group1": {
-            "title": "General",
-            "dashboard": "My Drive",
-            "files": "Files",
-            "folders": "Folders",
-            "history": "History",
-            "trash": "Trash",
-            "nodes": "Nodes",
-            "favorites": "Favorites"
+            "title": "Menu",
+            "home": "Accueil",
+            "tasks": "Tâches",
+            "interventions": "Interventions",
+            "missions_contracts": "Missions & Contrats",
+            "revenue_tracking": "Suivi CA",
+            "invoicing": "Facturation",
+            "bpf": "BPF"
         },
         "group2": {
-            "title": "My Account",
-            "profile": "Profile",
-            "settings": "Settings",
-            "support": "Support"
+            "title": "Organismes et Intermédiaires",
+            "training_organizations": "Organismes de Formation",
+            "intermediaries": "Intermédiaires",
+            "contacts": "Contacts"
         },
         "group3": {
-            "title": "Terms and Privacy",
-            "terms": "Terms",
-            "privacy": "Privacy"
+            "title": "Documents et Candidatures",
+            "stock_courses": "Cours en stock",
+            "my_documents": "Mes documents",
+            "my_applications": "Mes candidatures"
         },
-        "sign_out": "Sign out"
-    },
-    "header": {
-        "create": "Create",
-        "upload": "Upload",
-        "command": {
-            "title": "Search Commands",
-            "description": "Search for commands",
-            "command_input_placeholder": "Type to search...",
-            "command_input_placeholder_focus": "Type a command or search..."
+        "group4": {
+            "title": "Autres",
+            "sitemap": "Sitemap",
+            "template_documentation": "Documentation du template"
+        },
+        "group5": {
+            "title": "Termes et Confidentialité",
+            "terms": "Termes",
+            "privacy": "Confidentialité"
         }
     },
     "not_found_page": {
-        "title": "Page not found",
-        "description": "The page you are looking for does not exist.",
-        "link": "Go back to the home page"
+        "title": "Page non trouvée",
+        "description": "La page que vous recherchez n'existe pas.",
+        "link": "Retour à la page d'accueil"
     }
 }

@@ -1,13 +1,14 @@
 import {
+  CalendarDays,
+  ChartColumnBig,
   FileText,
-  History,
   LayoutDashboard,
   Lock,
-  MessageCircleQuestion,
-  Settings,
-  Star,
-  Trash,
+  Pin,
+  Receipt,
+  ReceiptText,
   User,
+  View
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -19,29 +20,39 @@ export const useNavigationItems = () => {
       group: t('group1.title'),
       items: [
         {
-          link: '/',
+          link: '/home',
           icon: <LayoutDashboard className='min-h-6 min-w-6' />,
-          label: t('group1.dashboard'),
-        },
-        // {
-        //   link: '/all-files',
-        //   icon: <File className='min-h-6 min-w-6' />,
-        //   label: t('group1.files'),
-        // },
-        {
-          link: '/history',
-          icon: <History className='min-h-6 min-w-6' />,
-          label: t('group1.history'),
+          label: t('group1.home'),
         },
         {
-          link: '/favorites',
-          icon: <Star className='min-h-6 min-w-6' />,
-          label: t('group1.favorites'),
+          link: '/tasks',
+          icon: <Pin className='min-h-6 min-w-6' />,
+          label: t('group1.tasks'),
         },
         {
-          link: '/trash',
-          icon: <Trash className='min-h-6 min-w-6' />,
-          label: t('group1.trash'),
+          link: '/interventions',
+          icon: <CalendarDays className='min-h-6 min-w-6' />,
+          label: t('group1.interventions'),
+        },
+        {
+          link: '/missions_contracts',
+          icon: <ReceiptText className='min-h-6 min-w-6' />,
+          label: t('group1.missions_contracts'),
+        },
+        {
+          link: '/revenue_tracking',
+          icon: <View className='min-h-6 min-w-6' />,
+          label: t('group1.revenue_tracking'),
+        },
+        {
+          link: '/invoicing',
+          icon: <Receipt className='min-h-6 min-w-6' />,
+          label: t('group1.invoicing'),
+        },
+        {
+          link: '/bpf',
+          icon: <ChartColumnBig className='min-h-6 min-w-6' />,
+          label: t('group1.bpf'),
         },
       ],
     },
@@ -49,19 +60,9 @@ export const useNavigationItems = () => {
       group: t('group2.title'),
       items: [
         {
-          link: '/profile',
+          link: '/training_organizations',
           icon: <User className="min-w-6 min-h-6" />,
-          label: t("group2.profile"),
-        },
-        {
-          link: '/settings',
-          icon: <Settings className='min-h-6 min-w-6' />,
-          label: t('group2.settings'),
-        },
-        {
-          link: '/support',
-          icon: <MessageCircleQuestion className='min-h-6 min-w-6' />,
-          label: t('group2.support'),
+          label: t("group2.training_organizations"),
         },
       ],
     },
@@ -69,14 +70,34 @@ export const useNavigationItems = () => {
       group: t('group3.title'),
       items: [
         {
+          link: '/stock_courses',
+          icon: <User className="min-w-6 min-h-6" />,
+          label: t("group3.stock_courses"),
+        },
+      ],
+    },
+    {
+      group: t('group4.title'),
+      items: [
+        {
+          link: '/sitemap',
+          icon: <User className="min-w-6 min-h-6" />,
+          label: t("group4.sitemap"),
+        },
+      ],
+    },
+    {
+      group: t('group5.title'),
+      items: [
+        {
           link: '/terms',
           icon: <FileText className='min-h-6 min-w-6' />,
-          label: t('group3.terms'),
+          label: t('group5.terms'),
         },
         {
           link: '/privacy',
           icon: <Lock className='min-h-6 min-w-6' />,
-          label: t('group3.privacy'),
+          label: t('group5.privacy'),
         },
       ],
     },

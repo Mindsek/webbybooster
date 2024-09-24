@@ -1,43 +1,57 @@
 {
-    "HomePage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
-    },
     "metadata": {
-        "description": "Your description here"
-    },
-    "navigation_command": {
-        "group1": {
-            "title": "General",
-            "dashboard": "My Drive",
-            "files": "Files",
-            "folders": "Folders",
-            "history": "History",
-            "trash": "Trash",
-            "nodes": "Nodes",
-            "favorites": "Favorites"
-        },
-        "group2": {
-            "title": "My Account",
-            "profile": "Profile",
-            "settings": "Settings",
-            "support": "Support"
-        },
-        "group3": {
-            "title": "Terms and Privacy",
-            "terms": "Terms",
-            "privacy": "Privacy"
-        },
-        "sign_out": "Sign out"
+        "title": "Webbybooster",
+        "description": "Simplify and optimize your activity as an independent trainer with Webbybooster. Specially designed for trainers, this all-in-one tool helps you manage your administrative tasks, plan your courses, and organize your interventions efficiently. Perfect for both novices and experts.",
+        "login": "Login",
+        "home": "Home",
+        "terms": "Terms",
+        "privacy": "Privacy",
+        "interventions": "Interventions",
+        "bpf": "BPF",
+        "missions_contracts": "Missions & Contracts",
+        "revenue_tracking": "Revenue Tracking",
+        "invoicing": "Invoicing"
     },
     "header": {
-        "create": "Create",
-        "upload": "Upload",
         "command": {
             "title": "Search Commands",
             "description": "Search for commands",
             "command_input_placeholder": "Type to search...",
             "command_input_placeholder_focus": "Type a command or search..."
+        }
+    },
+    "navigation_command": {
+        "group1": {
+            "title": "Menu",
+            "home": "Home",
+            "tasks": "Tasks",
+            "interventions": "Interventions",
+            "missions_contracts": "Missions & Contracts",
+            "revenue_tracking": "Revenue Tracking",
+            "invoicing": "Invoicing",
+            "bpf": "BPF"
+        },
+        "group2": {
+            "title": "Organizations and Intermediaries",
+            "training_organizations": "Training Organizations",
+            "intermediaries": "Intermediaries",
+            "contacts": "Contacts"
+        },
+        "group3": {
+            "title": "Documents and Applications",
+            "stock_courses": "Stock Courses",
+            "my_documents": "My Documents",
+            "my_applications": "My Applications"
+        },
+        "group4": {
+            "title": "Others",
+            "sitemap": "Sitemap",
+            "template_documentation": "Template Documentation"
+        },
+        "group5": {
+            "title": "Terms and Privacy",
+            "terms": "Terms",
+            "privacy": "Privacy"
         }
     },
     "not_found_page": {

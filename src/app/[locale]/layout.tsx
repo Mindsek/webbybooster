@@ -24,8 +24,8 @@ export const generateMetadata = async ({
 
   return {
     title: {
-      default: 'NEOVA',
-      template: '%s - NEOVA',
+      default: 'Webbybooster',
+      template: '%s - Webbybooster',
     },
     description: t('description'),
   };
@@ -48,7 +48,7 @@ const RootLayout = async (props: Props) => {
       suppressHydrationWarning
       className='h-full'
     >
-      <body className={cn('h-full overflow-x-hidden bg-background')}>
+      <body className={cn('h-full overflow-x-hidden bg-backgroundSecondary')}>
         <ThemeProviders
           attribute='class'
           defaultTheme='dark'
@@ -56,7 +56,9 @@ const RootLayout = async (props: Props) => {
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <main className='flex grow'>{props.children}</main>
+            <main className='flex grow'>
+              {props.children}
+            </main>
             <Toaster />
           </NextIntlClientProvider>
         </ThemeProviders>

@@ -1,4 +1,5 @@
 'use client';
+import { LocaleSwitcher } from '@/components/ui-components/LocaleSwitcher/LocaleSwitcher';
 import {
   Command,
   CommandGroup,
@@ -63,6 +64,7 @@ const SideBar = () => {
         </Command>
       </div>
       <div className='flex flex-col items-start gap-2 overflow-hidden'>
+        <LocaleSwitcher />
         <ModeToggle />
       </div>
     </div>

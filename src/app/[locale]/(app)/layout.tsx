@@ -16,7 +16,9 @@ const RootLayout = async (props: Props) => {
         <Sidebar />
       </nav>
       <section className='flex grow flex-col'>
-        <div className='p-4'><Header /></div>
+        <div className='p-4'>
+          <Header />
+        </div>
         <div className={cn('flex h-full grow flex-col p-4')}>
           {props.children}
         </div>
