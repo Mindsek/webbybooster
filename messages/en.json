@@ -5,5 +5,44 @@
     },
     "metadata": {
         "description": "Your description here"
+    },
+    "navigation_command": {
+        "group1": {
+            "title": "General",
+            "dashboard": "My Drive",
+            "files": "Files",
+            "folders": "Folders",
+            "history": "History",
+            "trash": "Trash",
+            "nodes": "Nodes",
+            "favorites": "Favorites"
+        },
+        "group2": {
+            "title": "My Account",
+            "profile": "Profile",
+            "settings": "Settings",
+            "support": "Support"
+        },
+        "group3": {
+            "title": "Terms and Privacy",
+            "terms": "Terms",
+            "privacy": "Privacy"
+        },
+        "sign_out": "Sign out"
+    },
+    "header": {
+        "create": "Create",
+        "upload": "Upload",
+        "command": {
+            "title": "Search Commands",
+            "description": "Search for commands",
+            "command_input_placeholder": "Type to search...",
+            "command_input_placeholder_focus": "Type a command or search..."
+        }
+    },
+    "not_found_page": {
+        "title": "Page not found",
+        "description": "The page you are looking for does not exist.",
+        "link": "Go back to the home page"
     }
 }
