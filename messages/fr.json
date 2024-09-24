@@ -1,0 +1,9 @@
+{
+    "HomePage": {
+        "title": "Bonjour le monde!",
+        "about": "Allez à la page à propos"
+    },
+    "metadata": {
+        "description": "Votre description ici"
+    }
+}
