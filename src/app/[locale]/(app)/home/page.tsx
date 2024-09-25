@@ -1,10 +1,11 @@
+import KanbanTasks from "@/components/ui-components/KanbanTasks/KanbanTasks";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 const HomePage = () => {
     return (
         <div>
-            <h1>home</h1>
+            <KanbanTasks />
         </div>
     );
 };
