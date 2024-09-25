@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 import CommandSearchBar from "@/components/layout/Header/CommandSearchBar/CommandSearchBar";
 import { useHeader } from "@/components/layout/Header/Header.logic";

@@ -1,76 +1,32 @@
-// components/Taskboard
 "use client";
-import { Button } from "@/components/ui/button";
 import {
     closestCorners,
     DndContext,
-    DragEndEvent,
-    DragOverlay,
-    DragStartEvent,
-    KeyboardSensor,
-    MouseSensor,
-    PointerSensor,
-    TouchSensor,
-    useSensor,
-    useSensors,
+    DragOverlay
 } from "@dnd-kit/core";
-import {
-    sortableKeyboardCoordinates
-} from "@dnd-kit/sortable";
-import { useState } from "react";
-import KanbanColumn from "./KanbanColumn";
-import KanbanItemDraggable from "./KanbanItemDraggable";
+import { AddTasksDialog } from "./add/AddTasksDialog";
+import KanbanColumn from "./column/KanbanColumn";
+import KanbanItemDraggable from "./item/KanbanItemDraggable";
 import { useKanbanTasks } from "./KanbanTasks.logic";
 
 export default function KanbanTasks() {
     const logic = useKanbanTasks();
-    const [activeId, setActiveId] = useState<string | null>(null);
-    const sensors = useSensors(
-        useSensor(MouseSensor),
-        useSensor(PointerSensor),
-        useSensor(KeyboardSensor, {
-            coordinateGetter: sortableKeyboardCoordinates,
-        }),
-        useSensor(TouchSensor)
-    );
-
-    const handleDragStart = (event: DragStartEvent) => {
-        setActiveId(event.active.id as string);
-    };
-
-    const handleDragEnd = async (event: DragEndEvent) => {
-        const { active, over } = event;
-        if (!over) return;
-        if (over && active.id !== over.id) {
-            console.log(active, over);
-        }
-        setActiveId(null);
-    };
-
-    const activeTask = activeId
-        ? logic.tasks.find((task) => task.id === activeId)
-        : null;
-
     return (
         <DndContext
-            sensors={sensors}
+            sensors={logic.sensors}
             collisionDetection={closestCorners}
-            onDragStart={handleDragStart}
-            onDragEnd={handleDragEnd}
+            onDragStart={logic.handleDragStart}
+            onDragOver={logic.onDragOver}
+            onDragEnd={logic.handleDragEnd}
         >
             <div className="mb-6 flex items-center justify-between flex-wrap">
-                <div className="">
+                <div className="flex gap-4 items-center">
+                    <h2 className="text-3xl font-bold mb-2">{logic.t("title")}</h2>
                     {logic.tasks.length > 0 && (
                         <p>({logic.tasks.length} Tasks)</p>
                     )}
-
-                    {/* <TaskForm
-                        moduleId={activeModule.id}
-                        initialStatus="TODO"
-                        isDefault={true}
-                    /> */}
-                    <Button>Ajouter une tâche</Button>
                 </div>
+                <AddTasksDialog />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {(["not_started", "in_progress", "completed"] as const).map((status) => (
@@ -78,13 +34,13 @@ export default function KanbanTasks() {
                         key={status}
                         tasks={logic.tasks}
                         status={status}
-                        activeId={activeId}
+                        activeId={logic.activeId}
                     />
                 ))}
             </div>
             <DragOverlay>
-                {activeId && activeTask ? (
-                    <KanbanItemDraggable id={activeId} task={activeTask} isDragging={false} />
+                {logic.activeId && logic.activeTask ? (
+                    <KanbanItemDraggable id={logic.activeId} task={logic.activeTask} isDragging={false} />
                 ) : null}
             </DragOverlay>
         </DndContext>

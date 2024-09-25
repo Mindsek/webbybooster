@@ -58,5 +58,15 @@
         "title": "Page non trouvée",
         "description": "La page que vous recherchez n'existe pas.",
         "link": "Retour à la page d'accueil"
+    },
+    "tasks": {
+        "title": "Suivi de tâches",
+        "tasks": "Tâches",
+        "add": "Ajouter une tâche",
+        "status": {
+            "not_started": "À faire",
+            "in_progress": "En cours",
+            "completed": "Terminée"
+        }
     }
 }

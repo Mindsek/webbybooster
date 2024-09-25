@@ -3,11 +3,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 const HomePage = () => {
-    return (
-        <div>
-            <KanbanTasks />
-        </div>
-    );
+    return <KanbanTasks />;
 };
 
 export default HomePage;
