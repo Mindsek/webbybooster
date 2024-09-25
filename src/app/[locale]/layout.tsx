@@ -39,12 +39,13 @@ type Props = {
 };
 
 const RootLayout = async (props: Props) => {
-  unstable_setRequestLocale(props.params.locale);
+  const locale = props.params.locale;
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
     <html
-      lang={props.params.locale}
+      lang={locale}
       suppressHydrationWarning
       className='h-full'
     >
