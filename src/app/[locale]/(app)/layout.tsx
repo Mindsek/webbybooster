@@ -1,11 +1,12 @@
 import Header from '@/components/layout/Header/Header';
 import Sidebar from '@/components/layout/Sidebar/Sidebar';
+import { Locale } from '@/constants/international';
 import { cn } from '@/lib/utils';
 
 type Props = {
   children: React.ReactNode;
   params: {
-    locale: string;
+    locale: Locale;
   };
 };
 

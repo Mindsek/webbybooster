@@ -1,5 +1,5 @@
 import { Toaster } from '@/components/ui/toaster';
-import { locales } from '@/constants/international';
+import { Locale, locales } from '@/constants/international';
 import { cn } from '@/lib/utils';
 import { ThemeProviders } from '@/theme/ThemeProvider';
 import { Metadata } from 'next';
@@ -11,9 +11,8 @@ import {
 } from 'next-intl/server';
 import './globals.css';
 export const generateStaticParams = async () => {
-  return locales.map((locale) => ({ locale }));
+  return locales.map((locale: Locale) => ({ locale }));
 };
-
 export const generateMetadata = async ({
   params: { locale },
 }: {
@@ -33,7 +32,7 @@ export const generateMetadata = async ({
 type Props = {
   children: React.ReactNode;
   params: {
-    locale: string;
+    locale: Locale;
   };
 };
 
@@ -44,7 +43,7 @@ const RootLayout = async (props: Props) => {
 
   return (
     <html
-      lang={locale}
+      lang={locale as Locale}
       suppressHydrationWarning
       className='h-full'
     >
