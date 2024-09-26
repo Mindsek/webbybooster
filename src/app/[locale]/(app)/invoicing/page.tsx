@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 const HomePage = () => {
     return (
         <div>
-            <h1>home</h1>
+            <h1>invoicing</h1>
         </div>
     );
 };

@@ -1,24 +1,24 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-const HomePage = () => {
-    return (
-        <div>
-            <h1>home</h1>
-        </div>
-    );
+const Page = () => {
+  return (
+    <div>
+      <h1>tasks</h1>
+    </div>
+  );
 };
 
-export default HomePage;
+export default Page;
 
 export const generateMetadata = async ({
-    params: { locale },
-  }: {
-    params: { locale: string };
-  }): Promise<Metadata> => {
-    const t = await getTranslations({ locale, namespace: "metadata" });
-  
-    return {
-      title: t("tasks"),
-    };
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> => {
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("tasks"),
   };
+};

@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-const HomePage = () => {
+const Page = () => {
     return (
         <div>
-            <h1>home</h1>
+            <h1>revenue tracking</h1>
         </div>
     );
 };
 
-export default HomePage;
+export default Page;
 
 export const generateMetadata = async ({
     params: { locale },

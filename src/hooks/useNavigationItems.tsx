@@ -35,12 +35,12 @@ export const useNavigationItems = () => {
           label: t('group1.interventions'),
         },
         {
-          link: '/missions_contracts',
+          link: '/missions-contracts',
           icon: <ReceiptText className='min-h-6 min-w-6' />,
           label: t('group1.missions_contracts'),
         },
         {
-          link: '/revenue_tracking',
+          link: '/revenue-tracking',
           icon: <View className='min-h-6 min-w-6' />,
           label: t('group1.revenue_tracking'),
         },
@@ -60,9 +60,19 @@ export const useNavigationItems = () => {
       group: t('group2.title'),
       items: [
         {
-          link: '/training_organizations',
+          link: '/training-organizations',
           icon: <User className="min-w-6 min-h-6" />,
           label: t("group2.training_organizations"),
+        },
+        {
+          link: '/intermediaries',
+          icon: <User className="min-w-6 min-h-6" />,
+          label: t("group2.intermediaries"),
+        },
+        {
+          link: '/contacts',
+          icon: <User className="min-w-6 min-h-6" />,
+          label: t("group2.contacts"),
         },
       ],
     },
@@ -70,9 +80,19 @@ export const useNavigationItems = () => {
       group: t('group3.title'),
       items: [
         {
-          link: '/stock_courses',
+          link: '/stock-courses',
           icon: <User className="min-w-6 min-h-6" />,
           label: t("group3.stock_courses"),
+        },
+        {
+          link: '/my-documents',
+          icon: <User className="min-w-6 min-h-6" />,
+          label: t("group3.my_documents"),
+        },
+        {
+          link: '/my-applications',
+          icon: <User className="min-w-6 min-h-6" />,
+          label: t("group3.my_applications"),
         },
       ],
     },
@@ -83,6 +103,11 @@ export const useNavigationItems = () => {
           link: '/sitemap',
           icon: <User className="min-w-6 min-h-6" />,
           label: t("group4.sitemap"),
+        },
+        {
+          link: '/template-documentation',
+          icon: <FileText className="min-w-6 min-h-6" />,
+          label: t("group4.template_documentation"),
         },
       ],
     },
