@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+export const dynamic = 'force-dynamic';
 
 const NotFound = () => {
   const t = useTranslations('not_found_page');
