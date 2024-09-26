@@ -38,7 +38,7 @@ type Props = {
 
 const RootLayout = async (props: Props) => {
   const locale = props.params.locale;
-  unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(locale as Locale);
   const messages = await getMessages();
 
   return (

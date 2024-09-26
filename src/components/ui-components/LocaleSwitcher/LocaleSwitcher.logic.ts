@@ -1,8 +1,8 @@
 "use client";
 import { Locale } from "@/constants/international";
 import { setLocale } from "@/i18n/locale";
+import { useRouter } from "@/i18n/routing";
 import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
 import { useTransition } from 'react';
 const languages = [
     {
