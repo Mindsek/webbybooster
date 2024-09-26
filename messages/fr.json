@@ -64,10 +64,34 @@
         "title": "Suivi de tâches",
         "tasks": "Tâches",
         "add": "Ajouter une tâche",
+        "edit": "Modifier",
+        "delete": "Supprimer",
         "status": {
             "not_started": "À faire",
             "in_progress": "En cours",
             "completed": "Terminée"
+        }
+    },
+    "sticky_note": {
+        "title": "Idées & Pensées",
+        "placeholder": "Nouvelle idée...",
+        "add": "Ajouter une idée",
+        "delete": "Supprimer"
+    },
+    "interventions": {
+        "title": "Interventions",
+        "add": "Ajouter",
+        "addTitle": "Ajouter un événement",
+        "delete": "Supprimer",
+        "form": {
+            "title": "Title",
+            "placeholder_title": "Titre de l'événement",
+            "description": "Description",
+            "placeholder_description": "Description de l'événement",
+            "location": "Lieu",
+            "placeholder_location": "Lieu de l'événement",
+            "date": "Date",
+            "placeholder_date": "Date de l'événement"
         }
     }
 }

@@ -47,7 +47,7 @@ const RootLayout = async (props: Props) => {
       suppressHydrationWarning
       className='h-full'
     >
-      <body className={cn('h-full overflow-x-hidden bg-backgroundSecondary')}>
+      <body className={cn('h-full overflow-x-hidden bg-secondary')}>
         <ThemeProviders
           attribute='class'
           defaultTheme='dark'

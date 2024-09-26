@@ -21,17 +21,7 @@ interface DraggableProps {
 
 export default memo(function KanbanItemDraggable({ id, task, isDragging }: DraggableProps) {
     const logic = useKanbanItemDraggableLogic({ id, task });
-
-    const handleEditClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        e.stopPropagation();
-        console.log('edit', task.id);
-    };
-
-    const handleDeleteClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        e.stopPropagation();
-        console.log('delete', task.id);
-        logic.handleDelete();
-    };
+    const localeDateString = new Date(task.createdAt).toLocaleDateString(logic.locale, { day: 'numeric', month: 'long', year: 'numeric' })
 
     return (
         <Card
@@ -47,7 +37,7 @@ export default memo(function KanbanItemDraggable({ id, task, isDragging }: Dragg
                     <Badge variant={task.importance === 'low' ? 'low' : task.importance === 'medium' ? 'medium' : 'destructive'}>Importance: {task.importance}</Badge>
                 </CardContent>
                 <CardFooter>
-                    <span>{new Date(task.createdAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                    <span>{localeDateString}</span>
                 </CardFooter>
             </div>
             <div className="absolute top-6 right-4">
@@ -58,11 +48,11 @@ export default memo(function KanbanItemDraggable({ id, task, isDragging }: Dragg
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                        <DropdownMenuItem onClick={handleEditClick}>
-                            Edit
+                        <DropdownMenuItem onClick={logic.handleEdit}>
+                            {logic.t("edit")}
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={handleDeleteClick}>
-                            Delete
+                        <DropdownMenuItem onClick={logic.handleDelete}>
+                            {logic.t("delete")}
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>

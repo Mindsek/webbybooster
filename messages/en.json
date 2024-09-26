@@ -64,10 +64,36 @@
         "title": "Task tracking",
         "tasks": "Tasks",
         "add": "Add a task",
+        "edit": "Edit",
+        "delete": "Delete",
         "status": {
             "not_started": "Not started",
             "in_progress": "In progress",
             "completed": "Completed"
+        }
+    },
+    "sticky_note": {
+        "title": "Ideas & Thoughts",
+        "placeholder": "New idea...",
+        "add": "Add an idea",
+        "delete": "Delete"
+    },
+    "interventions": {
+        "title": "Interventions",
+        "add": "Add an event",
+        "addTitle": "Add an event",
+        "edit": "Edit",
+        "delete": "Delete",
+        "form": {
+            "title": "Title",
+            "placeholder_title": "Event title",
+            "description": "Description",
+            "placeholder_description": "Description of the event",
+            "location": "Location",
+            "placeholder_location": "Location of the event",
+            "date": "Date",
+            "placeholder_date": "Date of the event",
+            "add": "Add"
         }
     }
 }

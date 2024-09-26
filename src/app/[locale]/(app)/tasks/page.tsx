@@ -1,11 +1,15 @@
+import KanbanTasks from "@/components/ui-components/KanbanTasks/KanbanTasks";
+import StickyNote from "@/components/ui-components/StickyNote/StickyNote";
+import { SpaceY16 } from "@/components/wrapper/SpaceY16";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 const Page = () => {
   return (
-    <div>
-      <h1>tasks</h1>
-    </div>
+    <SpaceY16>
+      <KanbanTasks />
+      <StickyNote />
+    </SpaceY16>
   );
 };
 

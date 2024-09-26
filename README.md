@@ -102,3 +102,5 @@ De plus pour le Kanban je me suis inspiré de l'exemple suivant :
 
 - https://github.com/Georgegriff/react-dnd-kit-tailwind-shadcn-ui/tree/main
 - https://desishub-docs.vercel.app/programming-tutorials/nextjs/kanban#prerequisites
+
+Pour le calendrier des interventions faut améliorer encore pour edit, delete etc.

@@ -9,19 +9,20 @@ interface KanbanColumnProps {
     tasks: KanbanTasks[];
     status: KanbanTasksStatus;
     activeId: string | null;
+    height?: string;
 }
 
-export default function KanbanColumn({ tasks, status, activeId }: KanbanColumnProps) {
+export default function KanbanColumn({ tasks, status, activeId, height }: KanbanColumnProps) {
     const logic = useKanbanColumnLogic({ status, tasks });
     return (
-        <Card className="overflow-hidden bg-backgroundSecondary">
+        <Card className="overflow-hidden bg-secondary">
             <CardHeader>
                 <h2 className="text-lg md:text-xl font-bold">
                     {logic.t(`status.${status}`)}
                 </h2>
             </CardHeader>
             <CardContent>
-                <ScrollArea ref={logic.setNodeRef} className="h-[70dvh]">
+                <ScrollArea ref={logic.setNodeRef} className={height}>
                     <SortableContext items={logic.filteredTasks} strategy={verticalListSortingStrategy}>
                         {logic.filteredTasks.map((task) => (
                             <KanbanItemDraggable key={task.id} id={task.id} task={task} isDragging={activeId === task.id} />
