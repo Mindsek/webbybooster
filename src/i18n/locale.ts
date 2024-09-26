@@ -2,7 +2,7 @@
 import { Locale } from '@/constants/international';
 import { cookies } from 'next/headers';
 
-export const setLocale = (locale: Locale) => {
+export const setLocale = async (locale: Locale) => {
   cookies().set({
     name: 'NEXT_LOCALE',
     value: locale,

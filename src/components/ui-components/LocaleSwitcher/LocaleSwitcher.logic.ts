@@ -25,8 +25,8 @@ export const useLocaleSwitcher = () => {
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
 
-    const handleLocaleChange = (newLocale: Locale) => {
-        setLocale(newLocale);
+    const handleLocaleChange = async (newLocale: Locale) => {
+        await setLocale(newLocale);
         startTransition(() => {
             router.refresh();
         });

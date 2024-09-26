@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Webbybooster
 
-## Getting Started
+Webbybooster est une application web moderne conçue pour simplifier et optimiser l'activité des formateurs indépendants. Cette plateforme tout-en-un aide à gérer les tâches administratives, planifier les cours et organiser efficacement les interventions.
 
-First, run the development server:
+## Technologies Utilisées
+
+- [Next.js 14](https://nextjs.org/) - Framework React avec rendu côté serveur (SSR)
+- [TypeScript](https://www.typescriptlang.org/) - Superset JavaScript typé
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitaire
+- [Zustand](https://zustand-demo.pmnd.rs/) - Bibliothèque de gestion d'état
+- [dnd kit](https://dndkit.com/) - Boîte à outils pour la fonctionnalité glisser-déposer
+- [Zod](https://zod.dev/) - Bibliothèque de validation de schéma
+- [next-intl](https://next-intl.vercel.app/) - Solution d'internationalisation pour Next.js
+- [next-themes](https://next-themes.vercel.app/) - Gestion des thèmes pour Next.js
+- [Lucide React](https://lucide.dev/) - Bibliothèque d'icônes
+- [shadcn/ui](https://ui.shadcn.com/) - Composants UI réutilisables
+
+## Fonctionnalités Principales
+
+- Tableau Kanban pour la gestion des tâches
+- Internationalisation (français et anglais)
+- Thème clair/sombre
+- Interface utilisateur responsive et accessible
+
+## Installation
+
+1. Clonez le dépôt :
+
+   ```bash
+   git clone https://github.com/votre-utilisateur/webbybooster.git
+   ```
+
+2. Installez les dépendances :
+
+   ```bash
+   cd webbybooster
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. Démarrez le serveur de développement :
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+Ouvrez [http://localhost:3000](http://localhost:3000) avec votre navigateur pour voir le résultat.
+
+## Scripts Disponibles
+
+Dans le répertoire du projet, vous pouvez exécuter :
 
 ```bash
-npm run dev
+npm run dev # Lance l'application en mode développement.
 # or
-yarn dev
+yarn dev # Construit l'application pour la production.
 # or
-pnpm dev
+pnpm dev # Démarre le serveur de production.
 # or
-bun dev
+bun dev # Exécute le linter ESLint.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure du projet
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+webbybooster/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── constants/
+│   ├── hooks/
+│   ├── i18n/
+│   ├── lib/
+│   ├── middlewares/
+│   ├── store/
+│   ├── theme/
+│   └── middleware.ts
+├── public/
+├── messages/
+├── .eslintrc.json
+├── next.config.js
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── tsconfig.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Stockage des données
 
-## Learn More
+Actuellement, notre application utilise le stockage local (localStorage) pour conserver les tâches du kanban. Cette approche est adoptée pour simplifier le développement initial et permettre une utilisation hors ligne.
+Par la suite, une implémentation de stockage en base de données est envisagée pour permettre une meilleure gestion des données et une utilisation plus performante de l'application.
 
-To learn more about Next.js, take a look at the following resources:
+De plus pour le Kanban je me suis inspiré de l'exemple suivant :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- https://github.com/Georgegriff/react-dnd-kit-tailwind-shadcn-ui/tree/main
+- https://desishub-docs.vercel.app/programming-tutorials/nextjs/kanban#prerequisites

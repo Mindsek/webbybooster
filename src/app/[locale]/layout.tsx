@@ -11,7 +11,7 @@ import {
 } from 'next-intl/server';
 import './globals.css';
 
-export const generateStaticParams = () => {
+export const generateStaticParams = async () => {
   return locales.map((locale) => ({ locale }));
 };
 
